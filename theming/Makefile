@@ -1,18 +1,16 @@
-docker-build:
-	docker build -t quay.io/jerolimov/backstage-experiments-theme-tests .
+host-build:
+	yarn install --frozen-lockfile
+	yarn tsc
+	yarn build:backend --config ../../app-config.yaml
+	docker image build . -f packages/backend/Dockerfile --tag quay.io/jerolimov/backstage-experiments:theming
 
-docker-run:
-	docker run --rm -it -p 3000:3000 -p 7007:7007 quay.io/jerolimov/backstage-experiments-theme-tests
+run:
+	docker run --rm -it -p 3000:3000 quay.io/jerolimov/backstage-experiments:theming
 
-docker-push:
-	docker push quay.io/jerolimov/backstage-experiments-theme-tests
+push:
+	docker push quay.io/jerolimov/backstage-experiments:theming
 
-deploy-sandbox:
-	oc -n cjerolim-dev new-app --image=quay.io/jerolimov/backstage-experiments-theme-tests
-
-rollout-sandbox:
-	oc rollout restart deployment/nginx
-
-deploy: deploy-sandbox
-
-rollout: rollout-sandbox
+deploy:
+	oc create deployment theming --image=quay.io/jerolimov/backstage-experiments@sha256:27bed0346a6ba9c3a90c1852330cee41bbba77e37030d4f41712a184e3307c88 --port=3000
+	oc expose deployment theming
+	oc create route edge theming --service=theming
