@@ -7473,15 +7473,15 @@
   dependencies:
     "@react-hookz/deep-equal" "^1.0.4"
 
-"@redhat-developer/red-hat-developer-hub-theme@^0.0.45":
-  version "0.0.45"
-  resolved "https://registry.yarnpkg.com/@redhat-developer/red-hat-developer-hub-theme/-/red-hat-developer-hub-theme-0.0.45.tgz#931672feb5e19a97a777a13da9af2bb0613de2f9"
-  integrity sha512-fbgaTryeeZm4xUAaxUDmC5H1Xa7HsBqSR/InKevayUg993zbcOScA+Ox74YvF8xrhtk6AIgjba4fq/GaC/JXZA==
-
 "@redhat-developer/red-hat-developer-hub-theme@^0.0.49":
   version "0.0.49"
   resolved "https://registry.yarnpkg.com/@redhat-developer/red-hat-developer-hub-theme/-/red-hat-developer-hub-theme-0.0.49.tgz#c5d538f0ebabcd8c7325c7d2255075b3250bbd1f"
   integrity sha512-qvM2p9QCv7rz6bnVNUlCKCmdyPVT5VK8QeUvwt6iDSdERVfH+CgZ0Xt+TqpZQtAHu2S25JDJZAEU9+HuyPYuJA==
+
+"@redhat-developer/red-hat-developer-hub-theme@^0.0.50":
+  version "0.0.50"
+  resolved "https://registry.yarnpkg.com/@redhat-developer/red-hat-developer-hub-theme/-/red-hat-developer-hub-theme-0.0.50.tgz#614736a9389f6502d3ad0041968517f499d4154a"
+  integrity sha512-rQkAN83yyC1H+dDJP8nr1Z9xAoP9GjIQh10FLPLOiG8qogDtORQQU5Eh/4nIlhDfPeM/FW980gzvRYqCnc/zmw==
 
 "@remix-run/router@1.16.1":
   version "1.16.1"
@@ -10845,7 +10845,7 @@ apg-lite@^1.0.3:
     "@janus-idp/backstage-plugin-quay" "^1.7.1"
     "@material-ui/core" "^4.12.2"
     "@material-ui/icons" "^4.9.1"
-    "@redhat-developer/red-hat-developer-hub-theme" "^0.0.45"
+    "@redhat-developer/red-hat-developer-hub-theme" "^0.0.49"
     "@roadiehq/backstage-plugin-jira" "^2.5.8"
     "@roadiehq/backstage-plugin-travis-ci" "^2.1.23"
     history "^5.0.0"
