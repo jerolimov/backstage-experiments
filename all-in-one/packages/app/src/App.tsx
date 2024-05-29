@@ -42,7 +42,7 @@ import { DevToolsPage } from '@backstage/plugin-devtools';
 import { PlaylistIndexPage, PlaylistPage } from '@backstage-community/plugin-playlist';
 import { TechRadarPage } from '@backstage-community/plugin-tech-radar';
 
-import { getThemes } from '@redhat-developer/red-hat-developer-hub-theme';
+import { getAllThemes as getThemes } from '@redhat-developer/red-hat-developer-hub-theme';
 
 const app = createApp({
   apis,
