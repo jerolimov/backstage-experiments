@@ -1,0 +1,23 @@
+meta {
+  name: all templates
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/catalog/entities?filter=kind=template
+  body: none
+  auth: bearer
+}
+
+query {
+  filter: kind=template
+}
+
+headers {
+  filter: kind=api
+}
+
+auth:bearer {
+  token: {{authToken}}
+}

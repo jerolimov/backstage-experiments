@@ -1,0 +1,19 @@
+meta {
+  name: all APIs
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/catalog/entities
+  body: none
+  auth: bearer
+}
+
+headers {
+  filter: kind=api
+}
+
+auth:bearer {
+  token: {{authToken}}
+}

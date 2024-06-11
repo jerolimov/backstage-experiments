@@ -1,0 +1,23 @@
+meta {
+  name: all docs
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/catalog/entities?filter=metadata.annotations.backstage.io%2Ftechdocs-ref
+  body: none
+  auth: bearer
+}
+
+query {
+  filter: metadata.annotations.backstage.io%2Ftechdocs-ref
+}
+
+headers {
+  filter: kind=api
+}
+
+auth:bearer {
+  token: {{authToken}}
+}

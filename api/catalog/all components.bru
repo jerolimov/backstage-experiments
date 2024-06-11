@@ -1,0 +1,19 @@
+meta {
+  name: all components
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/catalog/entities?filter=kind=component
+  body: none
+  auth: bearer
+}
+
+query {
+  filter: kind=component
+}
+
+auth:bearer {
+  token: {{authToken}}
+}

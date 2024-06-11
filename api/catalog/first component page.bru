@@ -1,0 +1,22 @@
+meta {
+  name: first component page
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/catalog/entities?filter=kind=component&limit=2&order=asc:metadata.name
+  body: none
+  auth: bearer
+}
+
+query {
+  filter: kind=component
+  limit: 2
+  order: asc:metadata.name
+  ~offset: 2
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
