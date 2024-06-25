@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
+
 import { UnifiedThemeProvider, themes as backstageThemes } from '@backstage/theme';
 import { useThemes } from '@redhat-developer/red-hat-developer-hub-theme';
 
